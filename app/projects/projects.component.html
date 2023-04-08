@@ -1,0 +1,14 @@
+<div *ngIf="uniqueProject()">
+</div>
+
+
+<div>
+
+    <ul class="list-group" style="width: 200px" *ngFor="let name of selectedproj">
+      <div
+        class="list-group-item btn btn-outline-success m-1"
+        >
+        <a (click)="onProject(name)">{{name}}</a>
+    </div>
+    </ul>
+  </div>

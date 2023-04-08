@@ -1,0 +1,8 @@
+<div>
+    <ul class="list-group" style="width: 200px"*ngFor="let i of data" >
+      <div class="list-group-item btn btn-outline-success m-1"
+        (click)="onStory(i)" >
+        <p>{{i.story.story_name}}</p>
+    </div>
+    </ul>
+  </div>

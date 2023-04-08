@@ -1,0 +1,20 @@
+
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a >Project</a></li>
+      <li class="breadcrumb-item"><a *ngIf="storyCrums">{{storyCrums}}</a></li>
+      <li class="breadcrumb-item active" aria-current="page" *ngIf="featuresCrumb">{{featuresCrumb}}</li>
+    </ol>
+  </nav>
+
+<div class="row">  
+    <div class="col-3">
+        <app-projects [data] ="projects" (onSelection)="selectedProjectDetails($event)"></app-projects>
+    </div>  
+    <div class="col-3">
+        <app-stories [data]="selectedproject"  (onSelectionstory)="selectedStoriesDetails($event)" ></app-stories>
+    </div> 
+    <div class="col-6">
+        <app-features [data]="selectedstories"></app-features>
+    </div>
+</div>   
